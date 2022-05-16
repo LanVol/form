@@ -1,0 +1,231 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: rgb(27,145,61);
+    background: linear-gradient(90deg, rgba(27,145,61,1) 20%, rgba(76,227,103,1) 83%);
+}
+
+
+img{
+    float:left;
+    margin-bottom: 1em;
+    margin-right: 1em;
+}
+
+.main{
+    background-color: white;
+    width: 20em;
+    margin: auto;
+    position: relative;
+    overflow-y: auto;
+    top: 0em;
+    padding:0em 2em;
+    box-shadow: 3px 3px 5px #888888, -3px 3px 5px #888888;
+}
+
+input[type=text],input[type=email]{
+    border: none;
+    appearance: none;
+    background-color: #d2eedd;
+    border-radius: 0px;
+    height: 2em;
+    padding: 0.3em;
+}
+
+input[type=text],input[type=email]{
+    border-radius: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background:
+      linear-gradient(90deg, #222, #222) center bottom/0 0.15em no-repeat,
+      linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.15em no-repeat,
+      linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
+    transition: background-size 0.3s ease;
+}
+  
+input[type=text].dirty,
+input[type=text]:not(:placeholder-shown),
+input[type=text]:focus {
+    background-size: 100% 0.15em, 100% 0.1em, 100%;
+}
+input[type=email].dirty,
+input[type=email]:not(:placeholder-shown),
+input[type=email]:focus {
+    background-size: 100% 0.15em, 100% 0.1em, 100%;
+}
+
+input:focus::placeholder{
+    color:transparent;
+}
+
+input::placeholder{
+    transition: color 0.2s ease;
+}
+
+.name{
+    clear: left;
+    margin-top:3em;
+}
+
+.name input{
+    width: 10em;
+}
+
+.mail{
+    margin-top:3em;
+}
+
+.mail input{
+    width: 25em;
+}
+
+.phone{
+    margin-top:3em;
+}
+
+.phone input{
+    width: 25em;
+}
+
+input[type=radio]{
+    opacity: 0;
+}
+
+.gender{
+    margin-top:3em;
+}
+
+.gender label{
+    position: relative;
+    cursor: pointer;
+
+}
+
+.gender label::before{
+    content: "";
+    border: 2px solid #bebebe;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: -8px 10px;
+    margin-left: 0;
+    margin-top: 5px;
+    border-radius: 50%;
+}
+
+.gender label::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 7px;
+    top: 13px;
+    margin: -8px 20px;
+    margin-left: 0;
+    border-radius: 50%;
+    scale: 0;
+
+    transition: all 0.4s;
+}
+
+input[type="radio"]:checked + label::after {
+    background: #069c5b;
+    scale: 1;
+}
+
+.birthday{
+    margin-top:3em;
+}
+
+.birthday input{
+    width: 25em;
+    height: 2em;
+    margin-top: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input[type=checkbox]{
+    opacity: 0;
+}
+
+.instruments{
+    margin-top:3em;
+}
+
+.instruments label{
+    position: relative;
+    cursor: pointer;
+}
+
+.instruments label::before{
+    content: "";
+    border: 2px solid #bebebe;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: -8px 10px;
+    margin-left: 0;
+    margin-top: 5px;
+}
+
+.instruments label::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 2px;
+    top: 8px;
+    margin: -8px 20px;
+    margin-left: 0;
+    scale: 0;
+    transition: all 0.4s;
+}
+
+input[type="checkbox"]:checked + label::after {
+    background: url("../img/check1.svg");
+    filter: invert(58%) sepia(66%) saturate(7163%) hue-rotate(136deg) brightness(93%) contrast(95%);
+    scale: 1;
+}
+
+.instruments:checked + .instruments::after{
+    transform: scale(1);
+}
+
+.submit{
+    margin-top:3em;
+    margin-left: 3em;
+}
+
+#submit{
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    border: 3px solid #069c5b;
+    font-size: 1.5em;
+}
+
+.level{
+    margin-top:3em;
+}
+
+.level select{
+    width: 16em;
+    font-size: 1.1em;
+    margin-top: 0.5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.comment{
+    margin-top: 3em;
+}
+
+.comment textarea{
+    margin-top: 0.5em;
+    resize: none
+}

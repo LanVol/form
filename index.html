@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <title>MCK Register</title>
+        <link rel="icon" type="image/png" href="img/icon.png"/>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <div class="main">
+            <img src="img/guitar.png" alt="Guitar icon" width="150" height="150"/>
+            <h1><b style="color:#069c5b">M</b>usical <b style="color:#069c5b">C</b>lub <b style="color:#069c5b">K</b>obarid</h1>
+            <form action="get" id="fullForm">
+                <div class="name">
+                    <label class="custom" for="name"><b>Name</b><b style="color:#069c5b">*</b></label>
+                    <label class="custom" for="surname" style="margin-left:6.3em"><b>Surname</b><b style="color:#069c5b">*</b></label><br/>
+                    <input type="text" id="firstname" name="name" placeholder="Enter Text" value="" required/>
+                    <input type="text" id="lastname" name="surname" style="margin-left:4.3em"placeholder="Enter Text" value="" required/>
+                </div>
+                <div class="mail">
+                    <label class="custom" for="mail"><b>Email</b><b style="color:#069c5b">*</b></label><br/>
+                    <input type="email" id="email" name="mail" placeholder="Enter Text" value="" required/>
+                </div>
+                <div class="phone">
+                    <label class="custom" for="phone"><b>Phone number</b></label><br/>
+                    <input type="text" id="phone" name="phonenumber" placeholder="Example: 123-456-789" pattern="[0-9]{3} [0-9]{3} [0-9]{3}" value="" required/>
+                </div>
+                <div class="gender">
+                    <b>Gender</b><b style="color:#069c5b">*</b><br/>
+                    <input type="radio" id="male" name="gender" required/>
+                    <label for="male" style="margin-right: 2em;">Male</label>
+                    <input type="radio" id="female" name="gender"/>
+                    <label for="female">Female</label>
+                </div>
+                <div class="birthday">
+                    <label for="birthday"><b>Date of Birth</b><b style="color:#069c5b">*</b></label><br/>
+                    <input type="date" id="birthday" name="birthday" required>
+                </div>
+                <div class="instruments">
+                    <b>Which instruments do you play</b>
+                    <br/>
+                    <input type="checkbox" id="strings" name="instruments"/>
+                    <label for="strings" style="margin-right: 2.7em;">Strings</label>
+                    <input type="checkbox" id="brass" name="instruments"/>
+                    <label for="brass">Brass</label>
+                    <br/><br/>
+                    <input type="checkbox" id="keyboards" name="instruments"/>
+                    <label for="keyboards" style="margin-right: 1em;">Keyboards</label>
+                    <input type="checkbox" id="winds" name="instruments"/>
+                    <label for="winds">Woodwinds</label>
+                    <br/><br/>
+                    <input type="checkbox" id="percussion" name="instruments"/>
+                    <label for="percussion" style="margin-right: 0.95em;">Percussion</label>
+                    <br/><br/>
+                    <input type="checkbox" id="other" name="instruments"/>
+                    <label for="other" style="margin-right: 1.5em;">Other</label>
+                    <input type="text" id="otherInst" name="other" placeholder="Enter Text" value="">
+                </div>
+                <div class="level">
+                    <label for="level"><b>What level of skill would you consider yourself</b><b style="color:#069c5b">*</b></label>
+                    <br/>
+                    <select name="level" id="skill" required>
+                    <option value="beginner">Beginner</option>
+                    <option value="amateur">Amateur</option>
+                    <option value="veteran">Veteran</option>
+                    </select>
+                </div>
+                <div class=comment>
+                    <label for=""><b>Anything you'd like to let us know</b></label>
+
+                    <textarea id="comment" name="additions" rows="6" cols="43">
+                    
+                    </textarea>
+                </div>
+                <div id="start">
+                    <input type="submit" value="Submit" id="submit" style="margin-left: 2.2em;"/>
+                </div>
+            </form>
+        </div>
+        <script src="js/sweetalert2.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
